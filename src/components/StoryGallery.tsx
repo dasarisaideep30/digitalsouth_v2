@@ -31,130 +31,65 @@ const GALLERY = [
 ];
 
 export default function StoryGallery() {
-  const [active, setActive] = React.useState(0);
-  const thumbRef = useRef<HTMLDivElement>(null);
-
-  const next = useCallback(
-    () => setActive((p) => (p + 1) % GALLERY.length),
-    []
-  );
-  const prev = useCallback(
-    () => setActive((p) => (p - 1 + GALLERY.length) % GALLERY.length),
-    []
-  );
-
-  // Auto-advance every 4 seconds
-  useEffect(() => {
-    const t = setInterval(next, 4000);
-    return () => clearInterval(t);
-  }, [next]);
-
-  const isFirstRender = useRef(true);
-
-  // Scroll active thumbnail into view
-  useEffect(() => {
-    if (!thumbRef.current) return;
-    
-    // Skip scrolling on first render to prevent page jump
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-
-    const el = thumbRef.current.children[active] as HTMLElement;
-    if (el) {
-      const container = thumbRef.current;
-      const scrollLeft = el.offsetLeft - container.offsetWidth / 2 + el.offsetWidth / 2;
-      container.scrollTo({
-        left: scrollLeft,
-        behavior: "smooth"
-      });
-    }
-  }, [active]);
+  // Triple the items for a smooth infinite loop
+  const marqueeItems = [...GALLERY, ...GALLERY, ...GALLERY];
 
   return (
-    <section className="section-padding bg-white overflow-hidden">
-      <div className="container mx-auto px-6">
-
-        {/* Section heading */}
-        <div className="mb-12">
-          <div className="flex items-center gap-4 text-brand-purple font-black tracking-[0.3em] text-xs mb-5 uppercase">
-            <div className="w-12 h-[2px] bg-brand-purple" />
-            OUR IMPACT
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-blue leading-tight tracking-tighter uppercase">
-            Blockchain Education Trust Activities
-          </h2>
+    <section className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-6 mb-16">
+        <div className="flex items-center gap-4 text-brand-purple font-black tracking-[0.3em] text-xs mb-5 uppercase">
+          <div className="w-12 h-[2px] bg-brand-purple" />
+          OUR IMPACT
         </div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-blue leading-tight tracking-tighter uppercase">
+          Trust Activities
+        </h2>
+      </div>
 
-        {/* Main large image */}
-        <div className="relative w-full rounded-[2rem] overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.22)] bg-gray-100 mb-5"
-          style={{ aspectRatio: "16/9" }}
+      {/* Infinite Horizontal Scroller */}
+      <div className="relative w-full overflow-hidden select-none group">
+        <motion.div
+          animate={{
+            x: ["0%", "-33.333%"],
+          }}
+          transition={{
+            duration: 60,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 1, // 1 second initial delay as requested
+          }}
+          className="flex whitespace-nowrap gap-6 lg:gap-8"
         >
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={active}
-              src={GALLERY[active].src}
-              alt={GALLERY[active].alt}
-              initial={{ opacity: 0, scale: 1.04 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.97 }}
-              transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-              className="absolute inset-0 w-full h-full object-cover object-center"
-            />
-          </AnimatePresence>
-
-          {/* Prev / Next arrows */}
-          <button
-            onClick={prev}
-            aria-label="Previous"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-all"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={next}
-            aria-label="Next"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-all"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-
-          {/* Slide counter pill */}
-          <div className="absolute bottom-4 right-4 z-20 px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-white text-xs font-black tracking-widest">
-            {String(active + 1).padStart(2, "0")} / {String(GALLERY.length).padStart(2, "0")}
-          </div>
-        </div>
-
-        {/* Thumbnail strip */}
-        <div
-          ref={thumbRef}
-          className="flex gap-3 overflow-x-auto pb-2 scroll-smooth"
-          style={{ scrollbarWidth: "none" }}
-        >
-          {GALLERY.map((item, i) => (
-            <button
-              key={item.id}
-              onClick={() => setActive(i)}
-              className={`relative shrink-0 w-36 h-24 rounded-xl overflow-hidden transition-all duration-300 ${
-                active === i
-                  ? "ring-3 ring-brand-blue scale-105 shadow-lg"
-                  : "opacity-60 hover:opacity-90"
-              }`}
-              aria-label={`View image ${i + 1}`}
+          {marqueeItems.map((item, i) => (
+            <motion.div
+              key={`${item.id}-${i}`}
+              whileHover={{ scale: 1.1, zIndex: 10 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="relative flex-shrink-0 w-[300px] h-[200px] lg:w-[450px] lg:h-[300px] rounded-3xl overflow-hidden shadow-xl border border-gray-100 cursor-pointer"
             >
               <img
                 src={item.src}
                 alt={item.alt}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover transition-transform duration-700"
               />
-              {active === i && (
-                <div className="absolute inset-0 ring-inset ring-2 ring-brand-blue rounded-xl pointer-events-none" />
-              )}
-            </button>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                 <p className="text-white text-xs font-bold leading-tight line-clamp-2">
+                    {item.alt}
+                 </p>
+              </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+        
+        {/* Edge Fades */}
+        <div className="absolute top-0 left-0 w-48 h-full bg-gradient-to-r from-white over via-white/50 to-transparent z-20 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-48 h-full bg-gradient-to-l from-white via-white/50 to-transparent z-20 pointer-events-none" />
+      </div>
 
+      <div className="container mx-auto px-6 mt-12 text-center">
+        <p className="text-gray-400 font-bold text-sm uppercase tracking-widest">
+           Empowering communities through innovative education & outreach
+        </p>
       </div>
     </section>
   );
