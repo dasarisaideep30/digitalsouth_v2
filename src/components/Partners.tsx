@@ -32,7 +32,7 @@ export default function Partners() {
   return (
     <section className="py-24 bg-brand-yellow relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10 mb-16">
-        <h2 className="text-center text-4xl font-black text-brand-blue uppercase tracking-[0.3em]">Our Partners</h2>
+        <h2 className="text-center text-4xl font-black text-brand-blue uppercase tracking-[0.3em]">Our Global Partners</h2>
       </div>
 
       {/* Infinite Marquee Container */}
