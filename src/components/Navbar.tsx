@@ -123,7 +123,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[60] bg-white dark:bg-black p-6 flex flex-col"
+            className="fixed inset-0 z-[60] bg-brand-blue/98 backdrop-blur-2xl p-6 flex flex-col"
           >
             <div className="flex justify-between items-center mb-12">
               <span className="text-2xl font-bold dark:text-white">Digital South</span>
@@ -141,25 +141,25 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => !item.dropdownItems && setIsMobileMenuOpen(false)}
-                    className="text-xl md:text-2xl font-bold dark:text-white flex justify-between items-center"
+                    className="text-xl md:text-2xl font-bold text-white flex justify-between items-center"
                   >
                     {item.name}
                     {item.hasDropdown ? (
-                      <ChevronDown className="w-6 h-6 text-brand-blue" />
+                      <ChevronDown className="w-6 h-6 text-brand-yellow" />
                     ) : (
-                      <ChevronRight className="w-6 h-6 text-brand-blue" />
+                      <ChevronRight className="w-6 h-6 text-brand-yellow" />
                     )}
                   </Link>
                   
                   {/* Mobile Dropdown Options */}
                   {item.dropdownItems && (
-                     <div className="flex flex-col space-y-4 pl-4 border-l-2 border-brand-blue/30 ml-2">
+                     <div className="flex flex-col space-y-4 pl-4 border-l-2 border-brand-yellow/30 ml-2">
                        {item.dropdownItems.map((subItem) => (
                          <Link
                            key={subItem.name}
                            href={subItem.href}
                            onClick={() => setIsMobileMenuOpen(false)}
-                           className="text-lg font-medium tracking-wide text-white/70 hover:text-brand-yellow"
+                           className="text-lg font-medium tracking-wide text-white/80 hover:text-brand-yellow"
                          >
                            {subItem.name}
                          </Link>

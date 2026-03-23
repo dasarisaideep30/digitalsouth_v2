@@ -36,14 +36,16 @@ export default function Partners() {
       </div>
 
       {/* Infinite Marquee Container */}
-      <div className="relative flex overflow-hidden group select-none">
+      <div className="relative overflow-hidden group select-none">
         <motion.div
-          animate={{
+           initial={{ x: 0 }}
+           animate={{
             x: ["0%", "-33.333%"],
           }}
           transition={{
-            duration: 40,
+            duration: 35, // Slightly faster to ensure perception of movement
             repeat: Infinity,
+            repeatType: "loop",
             ease: "linear",
             delay: 0.05,
           }}

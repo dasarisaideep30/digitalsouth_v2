@@ -3,6 +3,7 @@
 import React, { useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const GALLERY = [
   { id: 1, src: "/images/gallery/gallery-1.png", alt: "MoU signed between Digital South Trust and Kristu Jayanti University" },
@@ -47,16 +48,18 @@ export default function StoryGallery() {
       </div>
 
       {/* Infinite Horizontal Scroller */}
-      <div className="relative w-full overflow-hidden select-none group">
+      <div className="relative w-full overflow-hidden select-none group focus:outline-none">
         <motion.div
-          animate={{
+           initial={{ x: 0 }}
+           animate={{
             x: ["0%", "-33.333%"],
           }}
           transition={{
-            duration: 40, // Crisper flow for better immediate engagement
+            duration: 35, // Slightly faster to ensure perception of movement
             repeat: Infinity,
+            repeatType: "loop",
             ease: "linear",
-            delay: 0.05, // Instantaneous 0.05s delay as requested
+            delay: 0.1,
           }}
           className="flex whitespace-nowrap gap-6 lg:gap-8"
         >
@@ -67,10 +70,12 @@ export default function StoryGallery() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="relative flex-shrink-0 w-[300px] h-[200px] lg:w-[450px] lg:h-[300px] rounded-3xl overflow-hidden shadow-xl border border-gray-100 cursor-pointer"
             >
-              <img
+              <Image
                 src={item.src}
                 alt={item.alt}
-                className="w-full h-full object-cover transition-transform duration-700"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                sizes="(max-width: 768px) 300px, 450px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                  <p className="text-white text-xs font-bold leading-tight line-clamp-2">
