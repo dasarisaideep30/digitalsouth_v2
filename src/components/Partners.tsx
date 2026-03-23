@@ -6,6 +6,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const PARTNERS = [
+  { name: "VIT Chennai", logo: "/images/partners/vit-chennai.png" },
+  { name: "SRM Institute", logo: "/images/partners/srm-institute.png" },
+  { name: "Bharat Web3", logo: "/images/partners/bharat-web3.png" },
+  { name: "Art of Blockchain", logo: "/images/partners/aob.png" },
+  { name: "Daily Gurus", logo: "/images/partners/daily-gurus.png" },
   { name: "IBA", logo: "/images/partners/iba.webp" },
   { name: "KJU", logo: "/images/partners/kju.webp" },
   { name: "TNPA", logo: "/images/partners/tnpa.webp" },
