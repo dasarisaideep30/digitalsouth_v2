@@ -53,10 +53,10 @@ export default function StoryGallery() {
             x: ["0%", "-33.333%"],
           }}
           transition={{
-            duration: 45, // Slightly faster marquee for more energy
+            duration: 40, // Crisper flow for better immediate engagement
             repeat: Infinity,
             ease: "linear",
-            delay: 0.15, // Ultra-fast 0.15s delay as requested
+            delay: 0.05, // Instantaneous 0.05s delay as requested
           }}
           className="flex whitespace-nowrap gap-6 lg:gap-8"
         >
