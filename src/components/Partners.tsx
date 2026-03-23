@@ -6,6 +6,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const PARTNERS = [
+  { name: "IBA", logo: "/images/partners/iba-new.png" },
+  { name: "Kristu Jayanti", logo: "/images/partners/kristu-jayanti.png" },
+  { name: "TN Police Academy", logo: "/images/partners/tn-police.png" },
+  { name: "West Bengal Police", logo: "/images/partners/wb-police.png" },
+  { name: "Okto", logo: "/images/partners/okto.png" },
   { name: "UCTalent", logo: "/images/partners/uctalent.png" },
   { name: "IQL", logo: "/images/partners/iql.png" },
   { name: "FSV Capital", logo: "/images/partners/fsv-capital.png" },
@@ -16,7 +21,6 @@ const PARTNERS = [
   { name: "Bharat Web3", logo: "/images/partners/bharat-web3.png" },
   { name: "Art of Blockchain", logo: "/images/partners/aob.png" },
   { name: "Daily Gurus", logo: "/images/partners/daily-gurus.png" },
-  { name: "IBA", logo: "/images/partners/iba.webp" },
   { name: "KJU", logo: "/images/partners/kju.webp" },
   { name: "TNPA", logo: "/images/partners/tnpa.webp" },
   { name: "Jambo", logo: "/images/partners/jambo.svg" },
