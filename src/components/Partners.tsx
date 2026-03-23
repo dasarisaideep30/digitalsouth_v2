@@ -45,6 +45,7 @@ export default function Partners() {
             duration: 40,
             repeat: Infinity,
             ease: "linear",
+            delay: 0.05,
           }}
           className="flex whitespace-nowrap gap-16 lg:gap-24 py-10 px-12"
         >

@@ -10,16 +10,28 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function WhoWeArePage() {
+  const sections = [
+    { id: 'hero', component: <WhoWeAreHero /> },
+    { id: 'vision', component: <VisionMission /> },
+    { id: 'goals', component: <GoalsObjectives /> },
+    { id: 'leadership', component: <LeadershipProfiles /> },
+  ];
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Page Content */}
-      <WhoWeAreHero />
-      <VisionMission />
-      <GoalsObjectives />
-      <LeadershipProfiles />
-
+      {sections.map((section, idx) => (
+        <motion.div
+          key={section.id}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+        >
+          {section.component}
+        </motion.div>
+      ))}
 
       <Footer />
     </main>

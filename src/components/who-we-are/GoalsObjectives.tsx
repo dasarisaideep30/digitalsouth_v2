@@ -25,41 +25,44 @@ export default function GoalsObjectives() {
         <div className="bg-gray-100 rounded-[5rem] p-16 md:p-24 grid lg:grid-cols-2 gap-20">
           
           {/* Goals */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-6xl font-black text-brand-blue mb-12">Goals</h2>
+          <div>
+            <h2 className="text-6xl font-black text-brand-blue mb-12 uppercase tracking-tighter">Goals</h2>
             <ul className="space-y-6">
               {GOALS.map((goal, idx) => (
-                <li key={idx} className="flex items-start space-x-4">
-                  <span className="mt-2 w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" />
-                  <span className="text-xl font-medium text-gray-700 leading-relaxed">{goal}</span>
-                </li>
+                <motion.li 
+                  key={idx} 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                  className="flex items-start space-x-5"
+                >
+                  <span className="mt-2.5 w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" />
+                  <span className="text-xl font-semibold text-gray-700 leading-relaxed">{goal}</span>
+                </motion.li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Objectives */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-right"
-          >
-            <h2 className="text-6xl font-black text-brand-blue mb-12">Objectives</h2>
+          <div className="text-right">
+            <h2 className="text-6xl font-black text-brand-blue mb-12 uppercase tracking-tighter">Objectives</h2>
             <ul className="space-y-6">
               {OBJECTIVES.map((objective, idx) => (
-                <li key={idx} className="flex items-start justify-end space-x-4">
-                  <span className="text-xl font-medium text-gray-700 leading-relaxed text-right">{objective}</span>
-                  <span className="mt-2 w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" />
-                </li>
+                <motion.li 
+                  key={idx} 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                  className="flex items-start justify-end space-x-5"
+                >
+                  <span className="text-xl font-semibold text-gray-700 leading-relaxed text-right">{objective}</span>
+                  <span className="mt-2.5 w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" />
+                </motion.li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
         </div>
       </div>

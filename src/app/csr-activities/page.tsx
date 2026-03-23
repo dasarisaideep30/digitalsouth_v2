@@ -100,7 +100,12 @@ export default function CSRActivitiesPage() {
       <Navbar />
 
       <div className="pt-48 pb-48 container mx-auto px-6 max-w-6xl">
-        <header className="mb-24 text-center">
+        <motion.header 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-24 text-center"
+        >
           <span className="text-xs font-black text-brand-yellow uppercase tracking-[0.4em] mb-6 block">Social Responsibility</span>
           <h1 className="text-5xl md:text-8xl font-black text-brand-blue uppercase leading-[0.9] tracking-tighter mb-10">
             CSR <br className="md:hidden" /> Activities
@@ -109,7 +114,7 @@ export default function CSRActivitiesPage() {
           <p className="max-w-3xl mx-auto text-xl text-gray-500 font-medium italic">
             &quot;Transforming rural Bharat through technology, awareness, and compassionate action.&quot;
           </p>
-        </header>
+        </motion.header>
 
         <div className="space-y-32">
           {CSR_SECTIONS.map((section, idx) => (
