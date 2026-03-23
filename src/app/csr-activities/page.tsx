@@ -16,7 +16,7 @@ const CSR_SECTIONS = [
     content: (
       <div className="space-y-6">
         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-          We conduct targeted workshops and awareness campaigns to educate rural populations on essential financial practices, contributing to our mission of empowering rural India. Our research-driven approach, which includes cybersecurity research, helps us identify knowledge gaps, local financial behaviors, and community-specific challenges. Based on this data, we design customized learning modules that resonate with each region’s unique needs.
+          We conduct targeted workshops and awareness campaigns to educate rural populations on essential financial practices, contributing to our mission of empowering rural India. Our research-driven approach, which includes cybersecurity research, helps us identify knowledge gaps, local financial behaviors, and community-specific challenges. Based on this data, we design customized learning modules that resonate with each region&apos;s unique needs.
         </p>
         <p className="text-xl text-gray-600 leading-relaxed font-medium">
           From digital banking and UPI transactions to budgeting, savings, and avoiding digital scams, our health and wellness programs aim to equip every household with the practical knowledge needed to achieve financial literacy awareness, resist exploitation, and ultimately attain financial independence. By turning insights into action, we ensure our programs create measurable, lasting impact in rural economies.
@@ -32,7 +32,7 @@ const CSR_SECTIONS = [
     content: (
       <div className="space-y-6">
         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-          In today’s digital age, protecting personal data is just as crucial as gaining access to digital tools. At Digital South Trust, we adopt a research-driven approach to understand the unique cybersecurity challenges faced by rural communities, which is part of our broader mission of empowering rural India. Based on our cybersecurity research, we design and deliver tailored awareness programs across villages and schools, including initiatives like blood donation camps that promote health and wellness.
+          In today&apos;s digital age, protecting personal data is just as crucial as gaining access to digital tools. At Digital South Trust, we adopt a research-driven approach to understand the unique cybersecurity challenges faced by rural communities, which is part of our broader mission of empowering rural India. Based on our cybersecurity research, we design and deliver tailored awareness programs across villages and schools, including initiatives like blood donation camps that promote health and wellness.
         </p>
         <p className="text-xl text-gray-600 leading-relaxed font-medium">
           Through interactive sessions, we educate citizens about cyber hygiene, online safety, fraud prevention, and financial literacy awareness, ensuring they are well-equipped to navigate the digital landscape. By working closely with local stakeholders and continuously analyzing real-world threats, we build cyber-resilient communities where technology becomes a tool for empowerment—not a risk.
@@ -84,7 +84,7 @@ const CSR_SECTIONS = [
       <div className="space-y-6">
         <p className="text-xl text-gray-600 font-bold text-brand-blue uppercase tracking-widest">Every life matters — and your contribution can save one.</p>
         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-          At Digital South, we believe that true impact begins with compassion. With 16+ successful blood donation camps conducted across communities, we’ve been able to touch hundreds of lives and inspire collective action. Our health and wellness programs are designed to support those in need, particularly in empowering rural India.
+          At Digital South, we believe that true impact begins with compassion. With 16+ successful blood donation camps conducted across communities, we&apos;ve been able to touch hundreds of lives and inspire collective action. Our health and wellness programs are designed to support those in need, particularly in empowering rural India.
         </p>
         <p className="text-xl text-gray-600 leading-relaxed font-medium">
           Join hands with us. Support, volunteer, or help us organize more blood donation drives — because saving lives is the noblest act of all. Together, we can also promote financial literacy awareness and contribute to cybersecurity research to create a safer and more informed community.
@@ -107,7 +107,7 @@ export default function CSRActivitiesPage() {
           </h1>
           <div className="h-1.5 w-32 bg-brand-yellow mx-auto rounded-full mb-10" />
           <p className="max-w-3xl mx-auto text-xl text-gray-500 font-medium italic">
-            "Transforming rural Bharat through technology, awareness, and compassionate action."
+            &quot;Transforming rural Bharat through technology, awareness, and compassionate action.&quot;
           </p>
         </header>
 

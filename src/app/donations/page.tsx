@@ -105,7 +105,7 @@ export default function DonationsPage() {
                  <span className="text-xs font-black text-brand-yellow uppercase tracking-[0.4em] mb-6 block">The Impact</span>
                  <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight mb-8">Why Donate?</h2>
                  <p className="text-2xl font-bold italic text-white/80 leading-relaxed mb-10 border-l-4 border-brand-yellow pl-8">
-                   "Your contribution is more than a donation — It’s an investment in India’s digital and sustainable future."
+                   &quot;Your contribution is more than a donation — It&apos;s an investment in India&apos;s digital and sustainable future.&quot;
                  </p>
                  <p className="text-gray-300 font-medium text-lg">
                    Every rupee you donate helps bring education, technology, and opportunity to the places that need them most. From rural schools to blood donation camps, your support fuels the journey of a digitally stronger nation.
@@ -146,7 +146,7 @@ export default function DonationsPage() {
            
            <div className="p-12 rounded-[3.5rem] bg-brand-yellow text-black">
               <h3 className="text-2xl font-black uppercase mb-4">Together, we can build a more informed, empowered, and compassionate India.</h3>
-              <p className="font-bold mb-10 opacity-70 italic font-serif">"Our journey continues, fueled by your love and support."</p>
+              <p className="font-bold mb-10 opacity-70 italic font-serif">&quot;Our journey continues, fueled by your love and support.&quot;</p>
               <a 
                 href="https://rzp.io/l/digitalsouth" 
                 target="_blank"

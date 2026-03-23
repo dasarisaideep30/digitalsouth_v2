@@ -44,7 +44,7 @@ export default function WhitePaperPage() {
                     ROLE OF BLOCKCHAIN <br className="hidden md:block" /> IN VIKSIT BHARAT 2047
                  </h1>
                  <p className="text-gray-500 font-bold text-lg md:text-xl mb-10 leading-relaxed max-w-3xl mx-auto italic opacity-70">
-                   "An Educational Overview of India’s Blockchain Ecosystem — bridging technology and national vision."
+                   &quot;An Educational Overview of India&apos;s Blockchain Ecosystem — bridging technology and national vision.&quot;
                  </p>
                  <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-black text-[#1b3c74]/60 uppercase tracking-widest border-t border-b border-gray-50 py-5">
                    <div className="flex items-center">
