@@ -24,7 +24,7 @@ export default function VisionMission() {
         </div>
         <div className="relative h-[400px] lg:h-auto min-h-[500px]">
           <Image
-            src="/images/who_we_are_vision.png"
+            src="/images/who_we_are_vision_final.png"
             alt="Our Vision"
             fill
             className="object-cover"
@@ -36,7 +36,7 @@ export default function VisionMission() {
       <section className="grid lg:grid-cols-2">
         <div className="relative h-[400px] lg:h-auto min-h-[500px] order-last lg:order-first">
           <Image
-            src="/images/who_we_are_mission.png"
+            src="/images/who_we_are_mission_final.png"
             alt="Our Mission"
             fill
             className="object-cover"

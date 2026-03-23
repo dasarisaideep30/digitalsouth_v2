@@ -6,36 +6,28 @@ import Image from 'next/image';
 
 const LEADERS = [
   {
-    name: "Mr. Sanjay D",
-    role: "Founder & Trustee",
-    quote: "Empowering the next generation with the tools of decentralization is the cornerstone of our trust's vision for a Viksit Bharat.",
-    photo: "/v1-images/rs=w_1200,h_1200,cg_true (1).webp",
-    linkedin: "#",
-    reverse: false
-  },
-  {
-    name: "Mr. Sudhakar Lakshmanaraja",
-    role: "Founder",
+    name: "Mr. Sudhakar Lakshmana Raja",
+    role: "Managing Director",
     quote: "At Digital South Trust, our mission is to educate, empower, and elevate 100 million Indians through blockchain and emerging technologies.",
     photo: "/images/profile-sudhakar.png",
     linkedin: "https://www.linkedin.com/in/sudhakarlraja/",
-    reverse: true
-  },
-  {
-    name: "Mr. Karthik S",
-    role: "Trustee",
-    quote: "Building a resilient digital ecosystem requires collaboration, innovation, and a deep commitment to educational excellence.",
-    photo: "/images/profile-dileep.png",
-    linkedin: "#",
     reverse: false
   },
   {
-    name: "Mr. Lalith Krishnan",
+    name: "Mr. Lalith Krishnan H",
     role: "Director of Growth and Partnership",
     quote: "Partnerships create possibilities. By collaborating with institutions, innovators, and communities, we are accelerating blockchain adoption across India.",
-    photo: "/images/profile-lalith.png",
+    photo: "/images/profile-lalith-krishnan.png",
     linkedin: "https://www.linkedin.com/in/lalithkrishnan87/",
     reverse: true
+  },
+  {
+    name: "Mr. Dileep Kumar",
+    role: "Director of Operations",
+    quote: "Technology should serve as a bridge to opportunity, ensuring that no one is left behind in the digital age.",
+    photo: "/images/profile-dileep-kumar.png",
+    linkedin: "#",
+    reverse: false
   }
 ];
 

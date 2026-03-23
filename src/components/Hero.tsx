@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="absolute bottom-[-10%] right-[10%] w-[600px] h-[600px] bg-brand-purple rounded-full blur-[100px] mix-blend-screen opacity-50" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
+      <div className="container mx-auto px-6 relative z-10 pt-48 pb-20">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
           {/* Text Content */}

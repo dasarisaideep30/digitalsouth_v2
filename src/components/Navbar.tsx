@@ -54,9 +54,7 @@ export default function Navbar() {
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-          isScrolled 
-            ? "bg-brand-blue/95 backdrop-blur-xl border-white/10 py-3 shadow-2xl" 
-            : "bg-transparent border-transparent py-6"
+          "bg-brand-blue/95 backdrop-blur-xl border-white/10 py-3 shadow-2xl"
         )}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
@@ -86,7 +84,10 @@ export default function Navbar() {
 
                 {/* Desktop Dropdown */}
                 {item.dropdownItems && (
-                  <div className="absolute top-full left-0 pt-2 w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform translate-y-2 group-hover:translate-y-0">
+                  <div className={cn(
+                    "absolute top-full pt-2 w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform translate-y-2 group-hover:translate-y-0",
+                    item.name === 'MORE' ? "right-0" : "left-0"
+                  )}>
                     <div className="bg-brand-blue border border-white/5 py-4 flex flex-col shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] rounded-2xl overflow-hidden backdrop-blur-xl">
                       {item.dropdownItems.map((subItem) => (
                         <Link

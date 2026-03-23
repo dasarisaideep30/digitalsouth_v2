@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function WhoWeAreHero() {
   return (
-    <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-brand-blue">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-brand-blue pt-48 pb-12">
       {/* Network / Plexus-style background effect with vibrant colors */}
       <div className="absolute inset-0 bg-blue-600/10" />
       <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">

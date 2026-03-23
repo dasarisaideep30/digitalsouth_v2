@@ -4,7 +4,6 @@ import StatsGrid from "@/components/StatsGrid";
 import ImpactCharts from "@/components/ImpactCharts";
 import BookPromotion from "@/components/BookPromotion";
 import ResearchAreas from "@/components/ResearchAreas";
-import EditorialGrid from "@/components/EditorialGrid";
 import { NewsCarousel } from "@/components/NewsCarousel";
 import JoinUs from "@/components/JoinUs";
 import Partners from "@/components/Partners";
@@ -20,7 +19,7 @@ export default function Home() {
       <ImpactCharts />
       <BookPromotion />
       <ResearchAreas />
-      <EditorialGrid />
+
       <NewsCarousel />
       <JoinUs />
       <Partners />

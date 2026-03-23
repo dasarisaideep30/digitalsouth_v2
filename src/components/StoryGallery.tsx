@@ -49,12 +49,26 @@ export default function StoryGallery() {
     return () => clearInterval(t);
   }, [next]);
 
+  const isFirstRender = useRef(true);
+
   // Scroll active thumbnail into view
   useEffect(() => {
     if (!thumbRef.current) return;
+    
+    // Skip scrolling on first render to prevent page jump
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
     const el = thumbRef.current.children[active] as HTMLElement;
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+      const container = thumbRef.current;
+      const scrollLeft = el.offsetLeft - container.offsetWidth / 2 + el.offsetWidth / 2;
+      container.scrollTo({
+        left: scrollLeft,
+        behavior: "smooth"
+      });
     }
   }, [active]);
 
@@ -66,10 +80,10 @@ export default function StoryGallery() {
         <div className="mb-12">
           <div className="flex items-center gap-4 text-brand-purple font-black tracking-[0.3em] text-xs mb-5 uppercase">
             <div className="w-12 h-[2px] bg-brand-purple" />
-            KINDNESS CAPTURED
+            OUR IMPACT
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-blue leading-tight tracking-tighter uppercase">
-            Our Story Through Pictures
+            Blockchain Education Trust Activities
           </h2>
         </div>
 
