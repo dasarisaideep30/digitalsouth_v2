@@ -56,7 +56,7 @@ export default function StoryGallery() {
             duration: 60,
             repeat: Infinity,
             ease: "linear",
-            delay: 1, // 1 second initial delay as requested
+            delay: 0.5, // Updated delay to 0.5s as requested
           }}
           className="flex whitespace-nowrap gap-6 lg:gap-8"
         >
