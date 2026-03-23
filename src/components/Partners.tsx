@@ -1,5 +1,6 @@
 "use client";
 
+// Version 1.0.1 - Master Branch Deployment
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
