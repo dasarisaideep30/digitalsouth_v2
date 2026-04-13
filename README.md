@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Digital South Trust
 
-## Getting Started
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://digitalsouth.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-First, run the development server:
+**Digital South Trust** is India's leading non-profit organization dedicated to fostering a decentralized future through high-impact blockchain education, national policy advocacy, and community-driven initiatives. This platform serves as the digital gateway for students, educators, and industry leaders to engage with the Web3 revolution in India.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Live Deployment
+The application is live and can be accessed at:  
+👉 **[https://digitalsouth.vercel.app](https://digitalsouth.vercel.app)**
+
+---
+
+## ✨ Key Features
+
+- **🎓 Educational Outreach**: Integrated portals for blockchain diplomas, certificate programs, and distance education.
+- **📄 Research & Whitepapers**: A professional document viewer for national blockchain framework recommendations and Viksit Bharat 2047 policy papers.
+- **🤝 Trust Activities**: Real-time gallery showcasing impact programs, from smart classrooms to law enforcement training.
+- **💳 Secure Donations**: Fully integrated Razorpay gateway supporting education, environment, and health initiatives.
+- **🛡️ Compliance & Transparency**: Native pages for 80G/12A certification verification and unified privacy/volunteer terms.
+- **🎨 Premium UI/UX**: Built with a custom design system featuring glassmorphism, fluid animations (Framer Motion), and a responsive layout.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend**: [Next.js 15 (App Router)](https://next.org)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Deployment**: [Vercel](https://vercel.com)
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/             # Next.js App Router (Routes & Server Components)
+├── components/      # Reusable UI Components (Hero, Navbar, News, etc.)
+├── lib/             # Utilities and shared logic
+└── public/          # Static assets (Images, Videos, Logos)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Local Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js 18.x or higher
+- npm or yarn
 
-## Learn More
+### Setup
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/dasarisaideep30/digitalsouth_v2.git
+   cd digitalsouth_v2
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📧 Contact & Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For inquiries, collaborations, or support, reach out to us:
+
+- **Email**: [contact@digitalsouth.co.in](mailto:contact@digitalsouth.co.in)
+- **Website**: [www.digitalsouth.co.in](https://www.digitalsouth.co.in)
+- **Phone**: +91 8073053680
+
+---
+
+## ⚖️ License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<p align="center">
+  Built with ❤️ for a Digitally Empowered Bharat.
+</p>
