@@ -43,23 +43,13 @@ export default function ResearchPage() {
   const activePaper = RESEARCH_PAPERS[activeIdx];
 
   const handleNext = () => {
-    if (activePageNum < activePaper.pages) {
-      setActivePageNum(prev => prev + 1);
-    } else {
-      const nextIdx = (activeIdx + 1) % RESEARCH_PAPERS.length;
-      setActiveIdx(nextIdx);
-      setActivePageNum(1);
-    }
+    const nextIdx = (activeIdx + 1) % RESEARCH_PAPERS.length;
+    setActiveIdx(nextIdx);
   };
 
   const handlePrev = () => {
-    if (activePageNum > 1) {
-      setActivePageNum(prev => prev - 1);
-    } else {
-      const prevIdx = (activeIdx - 1 + RESEARCH_PAPERS.length) % RESEARCH_PAPERS.length;
-      setActiveIdx(prevIdx);
-      setActivePageNum(1);
-    }
+    const prevIdx = (activeIdx - 1 + RESEARCH_PAPERS.length) % RESEARCH_PAPERS.length;
+    setActiveIdx(prevIdx);
   };
 
   // Helper to determine the image to show

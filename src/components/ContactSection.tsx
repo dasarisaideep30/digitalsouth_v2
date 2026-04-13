@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube, Linkedin, Mail, Globe, Send } from 'lucide-react';
+import Logo from './Logo';
 
 // Custom X icon (formerly Twitter)
 const XIcon = () => (
@@ -21,11 +22,7 @@ export default function ContactSection() {
             {/* Logo area */}
             <div className="flex items-center space-x-4 mb-10">
               <div className="bg-white p-4 rounded-xl">
-                 <div className="flex -space-x-1">
-                    <div className="w-8 h-8 border-2 border-brand-blue rounded-full bg-white" />
-                    <div className="w-8 h-8 border-2 border-brand-blue rounded-full bg-white" />
-                    <div className="w-8 h-8 border-2 border-brand-blue rounded-full bg-white" />
-                 </div>
+                 <Logo variant="blue" showText={false} />
               </div>
               <div className="h-12 w-px bg-white/20 mx-4" />
               <div className="text-2xl font-black uppercase tracking-tighter leading-none">
@@ -53,11 +50,11 @@ export default function ContactSection() {
             <div className="space-y-6">
               <h3 className="text-sm uppercase tracking-[0.3em] font-black opacity-80">SOCIAL</h3>
               <div className="flex flex-wrap gap-8 items-center">
-                <a href="#" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Facebook size={40} strokeWidth={1.5} /></a>
-                <a href="#" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><XIcon /></a>
-                <a href="#" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Instagram size={40} strokeWidth={1.5} /></a>
-                <a href="#" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Youtube size={48} strokeWidth={1.5} /></a>
-                <a href="#" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Linkedin size={40} strokeWidth={1.5} fill="currentColor" /></a>
+                <a href="https://www.facebook.com/profile.php?id=61574746385654" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Facebook size={40} strokeWidth={1.5} /></a>
+                <a href="https://x.com/DigitalSouth12" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><XIcon /></a>
+                <a href="https://www.instagram.com/digitalsouthtrust/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Instagram size={40} strokeWidth={1.5} /></a>
+                <a href="https://www.youtube.com/@DigitalSouthTrust" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Youtube size={48} strokeWidth={1.5} /></a>
+                <a href="https://www.linkedin.com/company/digitalsouth/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Linkedin size={40} strokeWidth={1.5} fill="currentColor" /></a>
               </div>
             </div>
           </div>
@@ -79,13 +76,21 @@ export default function ContactSection() {
       <section className="bg-brand-yellow py-8 border-t border-black/5">
         <div className="container mx-auto px-6 flex flex-col items-center">
           <div className="flex space-x-6 mb-4">
-            <Facebook size={20} className="text-black cursor-pointer hover:scale-110 transition-transform" strokeWidth={2.5}/>
-            <Instagram size={20} className="text-black cursor-pointer hover:scale-110 transition-transform" strokeWidth={2.5}/>
-            <Linkedin size={20} className="text-black cursor-pointer hover:scale-110 transition-transform" strokeWidth={2.5}/>
-            <div className="w-5 h-5 flex items-center justify-center text-black cursor-pointer hover:scale-110 transition-transform">
+            <a href="https://www.facebook.com/profile.php?id=61574746385654" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 transition-transform">
+              <Facebook size={20} strokeWidth={2.5}/>
+            </a>
+            <a href="https://www.instagram.com/digitalsouthtrust/" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 transition-transform">
+              <Instagram size={20} strokeWidth={2.5}/>
+            </a>
+            <a href="https://www.linkedin.com/company/digitalsouth/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 transition-transform">
+              <Linkedin size={20} strokeWidth={2.5}/>
+            </a>
+            <a href="https://x.com/DigitalSouth12" target="_blank" rel="noopener noreferrer" className="w-5 h-5 flex items-center justify-center text-black hover:scale-110 transition-transform">
                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
-            </div>
-            <Youtube size={20} className="text-black cursor-pointer hover:scale-110 transition-transform" strokeWidth={2.5}/>
+            </a>
+            <a href="https://www.youtube.com/@DigitalSouthTrust" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 transition-transform">
+              <Youtube size={20} strokeWidth={2.5}/>
+            </a>
           </div>
           
           <p className="text-black font-black uppercase tracking-tight mb-2 text-center text-sm md:text-base">

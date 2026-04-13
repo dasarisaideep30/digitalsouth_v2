@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Logo from './Logo';
 
 const navItems = [
   { name: 'HOME', href: '/', hasDropdown: false },
@@ -58,13 +59,8 @@ export default function Navbar() {
         )}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className={cn(
-              "text-2xl font-bold tracking-tight transition-colors",
-              isScrolled ? "text-white" : "text-white"
-            )}>
-              Digital South
-            </span>
+          <Link href="/" className="flex items-center">
+            <Logo variant="white" />
           </Link>
 
           {/* Desktop Nav */}
@@ -126,7 +122,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-brand-blue/98 backdrop-blur-2xl p-6 flex flex-col"
           >
             <div className="flex justify-between items-center mb-12">
-              <span className="text-2xl font-bold dark:text-white">Digital South</span>
+              <Logo variant="white" />
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-2 border border-gray-200 dark:border-white/10 rounded-full"

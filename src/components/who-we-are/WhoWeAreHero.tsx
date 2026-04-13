@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Logo from '../Logo';
 
 export default function WhoWeAreHero() {
   return (
@@ -44,13 +45,9 @@ export default function WhoWeAreHero() {
           <div className="absolute right-0 top-0 w-64 h-full bg-brand-blue/5 -skew-x-12 transform translate-x-32" />
           
           <div className="relative z-10">
-             {/* Logo placeholder - Three interlocking circles from screenshot 4 */}
+             {/* Logo - Three interlocking circles */}
              <div className="flex justify-center mb-8">
-               <div className="flex -space-x-2">
-                 <div className="w-12 h-12 border-4 border-brand-blue rounded-full" />
-                 <div className="w-12 h-12 border-4 border-brand-blue rounded-full" />
-                 <div className="w-12 h-12 border-4 border-brand-blue rounded-full" />
-               </div>
+               <Logo variant="blue" showText={false} className="scale-[2]" />
              </div>
 
              <h1 className="text-5xl md:text-7xl font-black text-brand-blue mb-6 tracking-tight">
