@@ -86,7 +86,7 @@ export default function DonationsPage() {
                 </div>
 
                 <a 
-                  href="https://rzp.io/l/digitalsouth" 
+                  href="https://pages.razorpay.com/pl_QqSKV9PR1U8bFe/view" 
                   target="_blank" 
                   className="w-full py-5 bg-black text-white rounded-2xl font-black uppercase tracking-widest hover:bg-brand-yellow hover:text-black transition-all flex items-center justify-center gap-3 active:scale-95"
                 >
@@ -148,7 +148,7 @@ export default function DonationsPage() {
               <h3 className="text-2xl font-black uppercase mb-4">Together, we can build a more informed, empowered, and compassionate India.</h3>
               <p className="font-bold mb-10 opacity-70 italic font-serif">&quot;Our journey continues, fueled by your love and support.&quot;</p>
               <a 
-                href="https://rzp.io/l/digitalsouth" 
+                href="https://pages.razorpay.com/pl_QqSKV9PR1U8bFe/view" 
                 target="_blank"
                 className="inline-flex items-center gap-3 px-12 py-5 bg-black text-white rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
               >
