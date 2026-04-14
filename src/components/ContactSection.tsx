@@ -21,7 +21,7 @@ export default function ContactSection() {
           <div className="mb-16 lg:mb-0 w-full lg:w-1/2">
             {/* Logo area */}
             <div className="mb-10">
-              <Logo scale={1.2} />
+              <Logo height={60} />
             </div>
             
             <div className="space-y-4 text-2xl font-bold mb-12">

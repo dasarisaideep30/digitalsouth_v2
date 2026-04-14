@@ -20,8 +20,15 @@ const navItems = [
       { name: 'DIPLOMA IN BLOCKCHAIN', href: 'https://portfoliobygraphiaura.my.canva.site/diploma-in-blockchain-technology-in-distance-education-webpage' }
     ]
   },
-  { name: 'TRUST ACTIVITIES', href: '/trust-activities', hasDropdown: false },
-  { name: 'PRESS RELEASE', href: '/press-release', hasDropdown: false },
+  { 
+    name: 'TRUST & NEWS', 
+    href: '#', 
+    hasDropdown: true,
+    dropdownItems: [
+      { name: 'TRUST ACTIVITIES', href: '/trust-activities' },
+      { name: 'PRESS RELEASE', href: '/press-release' }
+    ]
+  },
   { name: 'RESEARCH PAPERS', href: '/research', hasDropdown: false },
   { 
     name: 'MORE', 

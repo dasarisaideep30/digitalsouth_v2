@@ -23,7 +23,7 @@ export default function WhitePaperPage() {
         {/* Header Branding */}
         <header className="mb-20 text-center">
            <div className="inline-block mb-12">
-              <Logo scale={1.2} />
+              <Logo height={60} />
            </div>
            <h2 className="text-neutral-500 font-bold tracking-[0.2em] text-sm uppercase">Official White Paper</h2>
         </header>

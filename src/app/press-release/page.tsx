@@ -167,14 +167,14 @@ export default function PressReleasePage() {
   const handlePrev = () => setActiveIdx((prev) => (prev - 1 + PRESS_RELEASES.length) % PRESS_RELEASES.length);
 
   return (
-    <main className="min-h-screen bg-brand-blue/5">
+    <main className="min-h-screen bg-brand-blue/5 overflow-y-auto">
       <Navbar />
       
       <div className="pt-32 pb-48 container mx-auto px-6 max-w-6xl">
         {/* IBA Logo Header */}
         <header className="mb-20 text-center">
            <div className="inline-block mb-12">
-              <Logo scale={1.2} />
+              <Logo height={60} />
            </div>
            <h2 className="text-neutral-500 font-bold tracking-[0.2em] text-sm uppercase">Digital News Center</h2>
         </header>

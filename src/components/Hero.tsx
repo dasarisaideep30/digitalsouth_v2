@@ -138,6 +138,17 @@ export default function Hero() {
                   <div className="text-base font-bold text-black dark:text-white">Web3 Leader</div>
                 </div>
               </motion.div>
+
+              {/* Floating Globe Widget - Right Corner */}
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-1/2 -right-12 lg:-right-20 bg-white dark:bg-black/90 backdrop-blur-2xl p-4 rounded-2xl shadow-2xl border border-white/10 z-30"
+              >
+                <div className="w-14 h-14 rounded-xl bg-brand-blue flex items-center justify-center text-white shadow-lg">
+                  <Globe className="w-8 h-8 animate-spin-slow" />
+                </div>
+              </motion.div>
             </motion.div>
           </div>
 
