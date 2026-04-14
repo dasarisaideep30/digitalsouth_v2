@@ -82,71 +82,55 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Layered Visuals / Interactive Card */}
-          <div className="lg:col-span-5 relative mt-12 lg:mt-0">
+          {/* Flagship Cinematic Globe Visual */}
+          <div className="lg:col-span-5 relative mt-12 lg:mt-0 flex justify-center items-center">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, rotateY: 20 }}
+              initial={{ opacity: 0, scale: 0.8 }}
               animate={{ 
                 opacity: 1, 
-                scale: 1, 
-                rotateY: 0,
-                y: [0, -20, 0] 
+                scale: 1,
+                y: [0, -25, 0] 
               }}
               transition={{ 
-                duration: 1.2, 
-                delay: 0.4,
-                y: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+                duration: 1, 
+                y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
               }}
-              className="relative aspect-square w-full max-w-[500px] mx-auto"
+              className="relative w-full max-w-[600px] aspect-square flex justify-center items-center"
             >
-              {/* Main Content Area */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-3xl rounded-[40px] border border-white/20 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.6)] overflow-hidden group">
-              <div className="absolute inset-0 asset-placeholder mix-blend-overlay opacity-50 group-hover:scale-105 transition-transform duration-1000" />
+              {/* Outer Glow effect */}
+              <div className="absolute inset-0 bg-brand-blue/20 rounded-full blur-[100px] animate-pulse" />
+              
+              {/* Main Globe Container */}
+              <div className="relative z-10 w-full h-full bg-gradient-to-br from-white/10 to-transparent backdrop-blur-3xl rounded-[60px] border border-white/20 shadow-[0_48px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
                 
-                <div className="absolute inset-0 p-12 flex flex-col justify-end">
-                  <Globe className="w-16 h-16 text-brand-cyan mb-6 animate-pulse" />
-                  <h3 className="text-4xl font-black text-white mb-3 uppercase tracking-tighter">Global Impact</h3>
-                  <p className="text-white/70 text-lg font-medium">Advancing decentralized technology for Bharat and beyond.</p>
+                {/* Large Central Globe */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-brand-cyan/20 blur-3xl rounded-full scale-150 group-hover:bg-brand-yellow/20 transition-colors duration-1000" />
+                  <Globe className="w-64 h-64 md:w-80 md:h-80 text-white opacity-90 drop-shadow-[0_0_30px_rgba(6,182,212,0.5)] animate-spin-slow" />
+                  
+                  {/* Digital Pulse Rings */}
+                  <div className="absolute inset-0 border-2 border-brand-cyan/30 rounded-full scale-110 animate-ping opacity-20" />
+                  <div className="absolute inset-0 border-2 border-brand-purple/20 rounded-full scale-125 animate-ping opacity-10 [animation-delay:1s]" />
+                </div>
+
+                <div className="absolute bottom-12 left-0 right-0 text-center px-10">
+                   <div className="text-xs font-black text-brand-cyan uppercase tracking-[0.4em] mb-4">India to World</div>
+                   <h3 className="text-3xl font-black text-white uppercase tracking-tighter">Decentralized Bharat</h3>
                 </div>
               </div>
 
-              {/* Floating Badges (Meta Style) */}
+              {/* Orbital Badges */}
               <motion.div
-                animate={{ y: [0, -15, 0], x: [0, 5, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-6 -right-6 lg:-right-10 bg-white dark:bg-black/90 backdrop-blur-2xl p-5 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.3)] border border-white/10 flex items-center space-x-4 z-20"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 pointer-events-none"
               >
-                <div className="w-12 h-12 rounded-2xl bg-green-500/20 flex items-center justify-center text-green-500">
-                  <Shield size={24} />
+                <div className="absolute -top-4 left-1/2 -ml-8 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 shadow-2xl rotate-[-360deg]">
+                   <Shield className="text-green-500 w-8 h-8" />
                 </div>
-                <div>
-                  <div className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-0.5">Trust Ranking</div>
-                  <div className="text-base font-bold text-black dark:text-white">India's #1 NGO</div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 15, 0], x: [0, -5, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-10 -left-6 lg:-left-12 bg-white dark:bg-black/90 backdrop-blur-2xl p-5 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.3)] border border-white/10 flex items-center space-x-4 z-20"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-brand-yellow/20 flex items-center justify-center text-brand-yellow">
-                  <Sparkles size={24} />
-                </div>
-                <div>
-                  <div className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-0.5">Innovation</div>
-                  <div className="text-base font-bold text-black dark:text-white">Web3 Leader</div>
-                </div>
-              </motion.div>
-
-              {/* Floating Globe Widget - Right Corner */}
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-1/2 -right-12 lg:-right-20 bg-white dark:bg-black/90 backdrop-blur-2xl p-4 rounded-2xl shadow-2xl border border-white/10 z-30"
-              >
-                <div className="w-14 h-14 rounded-xl bg-brand-blue flex items-center justify-center text-white shadow-lg">
-                  <Globe className="w-8 h-8 animate-spin-slow" />
+                <div className="absolute -bottom-4 left-1/2 -ml-8 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 shadow-2xl rotate-[-360deg]">
+                   <Sparkles className="text-brand-yellow w-8 h-8" />
                 </div>
               </motion.div>
             </motion.div>
