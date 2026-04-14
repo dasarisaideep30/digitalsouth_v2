@@ -7,8 +7,10 @@ import { ArrowRight, Globe, Shield, Sparkles } from 'lucide-react';
 const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     if (index < text.length) {
       const timeout = setTimeout(() => {
         setDisplayText((prev) => prev + text[index]);
@@ -18,10 +20,20 @@ const TypewriterText = ({ text }: { text: string }) => {
     }
   }, [index, text]);
 
+  if (!mounted) return null;
+
   return <span>{displayText}</span>;
 };
 
 export default function Hero() {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return <div className="min-h-screen mesh-gradient" />;
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden mesh-gradient">
       {/* Background Decorative Elements */}
