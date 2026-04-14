@@ -20,15 +20,8 @@ export default function ContactSection() {
         <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between text-white">
           <div className="mb-16 lg:mb-0 w-full lg:w-1/2">
             {/* Logo area */}
-            <div className="flex items-center space-x-4 mb-10">
-              <div className="bg-white p-4 rounded-xl">
-                 <Logo variant="blue" showText={false} />
-              </div>
-              <div className="h-12 w-px bg-white/20 mx-4" />
-              <div className="text-2xl font-black uppercase tracking-tighter leading-none">
-                Digital South <br />
-                <span className="text-sm font-bold opacity-80 decoration-brand-yellow decoration-2 underline-offset-4 underline">Trust</span>
-              </div>
+            <div className="mb-10">
+              <Logo scale={1.2} />
             </div>
             
             <div className="space-y-4 text-2xl font-bold mb-12">

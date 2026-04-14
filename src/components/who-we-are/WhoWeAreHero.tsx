@@ -45,14 +45,9 @@ export default function WhoWeAreHero() {
           <div className="absolute right-0 top-0 w-64 h-full bg-brand-blue/5 -skew-x-12 transform translate-x-32" />
           
           <div className="relative z-10">
-             {/* Logo - Three interlocking circles */}
-             <div className="flex justify-center mb-8">
-               <Logo variant="blue" showText={false} className="scale-[2]" />
+             <div className="flex justify-center mb-4">
+                <Logo scale={2.5} className="!transform-origin-center" />
              </div>
-
-             <h1 className="text-5xl md:text-7xl font-black text-brand-blue mb-6 tracking-tight">
-               Digital South Trust
-             </h1>
              <p className="text-xl md:text-2xl font-bold text-brand-blue/80 max-w-2xl mx-auto leading-tight italic">
                To Make India the Blockchain Talent Capital of the World
              </p>

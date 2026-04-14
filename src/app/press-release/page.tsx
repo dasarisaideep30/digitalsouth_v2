@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/ContactSection";
+import Logo from "@/components/Logo";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft, Download, Newspaper } from "lucide-react";
 import Image from "next/image";
@@ -172,8 +173,8 @@ export default function PressReleasePage() {
       <div className="pt-32 pb-48 container mx-auto px-6 max-w-6xl">
         {/* IBA Logo Header */}
         <header className="mb-20 text-center">
-           <div className="bg-white px-8 py-3 rounded-xl inline-block shadow-2xl mb-12 border border-gray-100">
-              <img src="/v1-images/IBA.webp" alt="Digital South Logo" className="h-12 mx-auto" />
+           <div className="inline-block mb-12">
+              <Logo scale={1.2} />
            </div>
            <h2 className="text-neutral-500 font-bold tracking-[0.2em] text-sm uppercase">Digital News Center</h2>
         </header>
