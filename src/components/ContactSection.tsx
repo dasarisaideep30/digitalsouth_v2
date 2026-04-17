@@ -43,7 +43,7 @@ export default function ContactSection() {
             <div className="space-y-6">
               <h3 className="text-sm uppercase tracking-[0.3em] font-black opacity-80">SOCIAL</h3>
               <div className="flex flex-wrap gap-8 items-center">
-                <a href="https://www.facebook.com/profile.php?id=61574746385654" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Facebook size={40} strokeWidth={1.5} /></a>
+                <a href="https://www.facebook.com/profile.php?id=61574764385654" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Facebook size={40} strokeWidth={1.5} /></a>
                 <a href="https://x.com/DigitalSouth12" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><XIcon /></a>
                 <a href="https://www.instagram.com/digitalsouthtrust/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Instagram size={40} strokeWidth={1.5} /></a>
                 <a href="https://www.youtube.com/@DigitalSouthTrust" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-transform hover:-translate-y-1"><Youtube size={48} strokeWidth={1.5} /></a>
@@ -69,7 +69,7 @@ export default function ContactSection() {
       <section className="bg-brand-yellow py-8 border-t border-black/5">
         <div className="container mx-auto px-6 flex flex-col items-center">
           <div className="flex space-x-6 mb-4">
-            <a href="https://www.facebook.com/profile.php?id=61574746385654" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 transition-transform">
+            <a href="https://www.facebook.com/profile.php?id=61574764385654" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 transition-transform">
               <Facebook size={20} strokeWidth={2.5}/>
             </a>
             <a href="https://www.instagram.com/digitalsouthtrust/" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 transition-transform">

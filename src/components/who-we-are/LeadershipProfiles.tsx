@@ -10,7 +10,7 @@ const LEADERS = [
     role: "Managing Director",
     quote: "At Digital South Trust, our mission is to educate, empower, and elevate 100 million Indians through blockchain and emerging technologies.",
     photo: "/images/profile-sudhakar.png",
-    linkedin: "https://www.linkedin.com/in/sudhakarlraja/",
+    linkedin: "https://www.linkedin.com/in/sudhakarlakshman",
     reverse: false
   },
   {
@@ -18,7 +18,7 @@ const LEADERS = [
     role: "Director of Growth and Partnership",
     quote: "Partnerships create possibilities. By collaborating with institutions, innovators, and communities, we are accelerating blockchain adoption across India.",
     photo: "/images/profile-lalith-krishnan.png",
-    linkedin: "https://www.linkedin.com/in/lalithkrishnan87/",
+    linkedin: "https://www.linkedin.com/in/lalith-krishnan-h",
     reverse: true
   },
   {
@@ -26,7 +26,7 @@ const LEADERS = [
     role: "Director of Operations",
     quote: "Technology should serve as a bridge to opportunity, ensuring that no one is left behind in the digital age.",
     photo: "/images/profile-dileep-kumar.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/dileep-kumar-h-v-ph-d-a44115ab/",
     reverse: false
   }
 ];
